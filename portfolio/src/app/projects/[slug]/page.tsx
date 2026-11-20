@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import NotaFileDetails from "@/components/projects/notafile";
 
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -19,19 +20,35 @@ async function ProjectDetails({ params }: ProjectPageProps) {
     notFound();
   }
 
+  if (project.slug === "notafile") {
+    return <NotaFileDetails />;
+  }
+
   return (
     <>
-      <p className="eyebrow">{project.number} / {project.category}</p>
+      <p className="eyebrow">
+        {project.number} / {project.category}
+      </p>
 
-      <h1>{project.name}<span>.</span></h1>
+      <h1>
+        {project.name}<span>.</span>
+      </h1>
 
-      <p className="project-description">{project.description}</p>
+      <p className="project-description">
+        {project.description}
+      </p>
 
       <h2>Technologies</h2>
 
-      <div className="technology-list">{project.technologies.map((tech) => (<span key={tech}>{tech}</span>))}</div>
+      <div className="technology-list">
+        {project.technologies.map((tech) => (
+          <span key={tech}>{tech}</span>
+        ))}
+      </div>
 
-      <p className="project-placeholder">More details about this project coming soon.</p>
+      <p className="project-placeholder">
+        More details about this project coming soon.
+      </p>
     </>
   );
 }
@@ -42,9 +59,17 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       <Header />
 
       <main className="project-detail section-container">
-        <Link href="/#work" className="text-link">← Back to projects</Link>
+        <Link href="/#work" className="text-link">
+          ← Back to projects
+        </Link>
 
-        <Suspense fallback={<p className="project-placeholder">Loading project details...</p>}>
+        <Suspense
+          fallback={
+            <p className="project-placeholder">
+              Loading project details...
+            </p>
+          }
+        >
           <ProjectDetails params={params} />
         </Suspense>
       </main>

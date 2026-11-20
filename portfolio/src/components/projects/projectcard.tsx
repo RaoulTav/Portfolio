@@ -7,7 +7,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, }: ProjectCardProps) {
   return (
-    <Link href={`/projects/${project.slug}`} className="project">
+    <Link href={`/projects/${project.slug}#top`} className="project">
       <span className="project-number">{project.number}</span>
 
       <div className="project-info">

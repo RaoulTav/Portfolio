@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="site-header">
-      <Link href="#home" className="logo">Raoul TAVERNEL <span>.</span></Link>
+      <Link href="/#home" className="logo">Raoul TAVERNEL <span>.</span></Link>
 
       <nav className="main-nav">
         <Link href="/#work">Work</Link>
