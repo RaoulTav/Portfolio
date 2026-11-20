@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import NotaFileDetails from "@/components/projects/notafile";
+import ServiSwapDetails from "@/components/projects/serviswap";
 
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -22,6 +23,10 @@ async function ProjectDetails({ params }: ProjectPageProps) {
 
   if (project.slug === "notafile") {
     return <NotaFileDetails />;
+  }
+
+  if (project.slug === "serviswap") {
+    return <ServiSwapDetails />;
   }
 
   return (
