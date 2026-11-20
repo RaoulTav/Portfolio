@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SocialLinks from "./social-links";
 
 export default function Header() {
   return (
@@ -11,6 +12,8 @@ export default function Header() {
         <Link href="/#skills">Skills</Link>
         <Link href="/#contact">Contact</Link>
       </nav>
+
+      <SocialLinks className="header-social-links" />
 
       <Link href="#contact" className="header-cta">Let's talk <span>↗</span></Link>
     </header>

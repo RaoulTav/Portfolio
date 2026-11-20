@@ -1,12 +1,17 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="hero section-container" id="home">
-      <p className="eyebrow"><span className="status-dot" />JUNIOR FULL-STACK APPLICATION DEVELOPER · BELGIUM</p>
-
-      <h1>Building digital<br />experiences with<br /><span>purpose.</span></h1>
+      <div className="hero-banner">
+        <Image src="/images/banner.jpg" alt="Build. Solve. Learn. Together." width={1400} height={350} loading="eager" className="serviswap-screenshot" />
+      </div>
 
       <div className="hero-bottom">
-        <p>I'm a software developer passionate about technology, problem-solving and creating meaningful digital solutions.</p>
+        <p>
+          I enjoy understanding problems, exploring possibilities and building practical applications. Always curious, always learning, and 
+          convinced that great things are built together.
+        </p>
 
         <a href="#work" className="text-link">Explore my work <span>↓</span></a>
       </div>
