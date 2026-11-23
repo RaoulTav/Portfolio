@@ -42,6 +42,10 @@ export default function ServiSwapDetails() {
 
         <p className="serviswap-lead">A community-driven platform where people exchange skills and services using time credits instead of money.</p>
 
+        <a className="repository-link" href="https://github.com/RaoulTav/ServiSwap" target="_blank" rel="noopener noreferrer">
+          View source on GitHub <span aria-hidden="true">↗</span>
+        </a>
+
         <div className="serviswap-meta">
           <span>Academic project</span><span>Team project</span><span>ASP.NET Core MVC</span>
         </div>

@@ -197,6 +197,26 @@ h2 span {
   margin-left: 8px;
 }
 
+.repository-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.repository-link:hover {
+  color: var(--accent);
+}
+
+.repository-link span {
+  color: var(--accent);
+}
+
 .hero-decoration {
   position: absolute;
   right: 0;
